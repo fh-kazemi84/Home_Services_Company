@@ -10,7 +10,8 @@ import lombok.Getter;
 public enum UserRole {
     CUSTOMER(0, "customer", "مشتری"),
     EXPERT(1, "expert", "متخصص"),
-    ADMIN(2, "admin", "مدیر سیستم");
+    ADMIN(2, "admin", "مدیر سیستم"),
+    UNKNOWN(3, "unknown", "نقش نامعلوم");
 
     private final Integer index;
     private final String title;

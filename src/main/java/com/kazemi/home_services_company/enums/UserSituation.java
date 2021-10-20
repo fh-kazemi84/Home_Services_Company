@@ -10,7 +10,8 @@ import lombok.Getter;
 public enum UserSituation {
     NEW(0, "new", "جدید"),
     AWAITING_APPROVAL(1, "awaiting approval", "در انتظار تأیید"),
-    APPROVAL(2, "approval", "تأیید شده");
+    APPROVAL(2, "approval", "تأیید شده"),
+    UNKNOWN(3, "unknown", "وضعیت نامعلوم");
 
     private final Integer index;
     private final String title;

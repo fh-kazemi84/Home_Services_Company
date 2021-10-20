@@ -54,6 +54,6 @@ public class User implements Serializable {
     private Long credit;
 
     public String getFullName() {
-        return this.name + " " + getFamily();
+        return getName() + " " + getFamily();
     }
 }
