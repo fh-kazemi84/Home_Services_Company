@@ -46,6 +46,7 @@ public class User implements Serializable {
     @Column(name = "user_situation")
     private UserSituation userSituation;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     @Column(name = "registration_date", updatable = false)
     private Date registrationDate = new Date();
