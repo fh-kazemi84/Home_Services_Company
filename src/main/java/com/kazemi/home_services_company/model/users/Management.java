@@ -21,6 +21,6 @@ public class Management extends User {
     private String username;
 
     public Management() {
-        this.setUserRole(UserRole.ADMIN);
+        this.setUserRole(UserRole.MANAGEMENT);
     }
 }
