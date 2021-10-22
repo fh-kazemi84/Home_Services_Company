@@ -1,10 +1,13 @@
 package com.kazemi.home_services_company.model.users;
 
+import com.kazemi.home_services_company.enums.UserRole;
 import com.kazemi.home_services_company.model.homeservices.Comments;
 import com.kazemi.home_services_company.model.homeservices.ExpertOffers;
-import com.kazemi.home_services_company.model.homeservices.Order;
+import com.kazemi.home_services_company.model.homeservices.Orders;
 import com.kazemi.home_services_company.model.homeservices.SubService;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,10 +19,8 @@ import java.util.List;
 
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor
 @Setter
 @Getter
-@ToString
 public class Expert extends User {
 
     @Lob
@@ -35,7 +36,7 @@ public class Expert extends User {
                     @JoinColumn(name = "expert_id", referencedColumnName = "id",
                             nullable = false, updatable = false)},
             inverseJoinColumns = {
-                    @JoinColumn(name = "subService_id", referencedColumnName = "id",
+                    @JoinColumn(name = "sub_service_id", referencedColumnName = "id",
                             nullable = false, updatable = false)})
     private List<SubService> subServices = new ArrayList<>();
 
@@ -46,8 +47,12 @@ public class Expert extends User {
     private List<Comments> comments = new ArrayList<>();
 
     @OneToMany(mappedBy = "expert")
-    private List<Order> orders = new ArrayList<>();
+    private List<Orders> orders = new ArrayList<>();
 
     @Column(name = "field")
     private String field;
+
+    public Expert() {
+        this.setUserRole(UserRole.EXPERT);
+    }
 }
