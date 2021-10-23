@@ -20,7 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 @Setter
 @Getter
-public class Customer extends User {
+public class Customer extends Users {
 
     @OneToMany(mappedBy = "customer")
     private List<Comments> comments = new ArrayList<>();

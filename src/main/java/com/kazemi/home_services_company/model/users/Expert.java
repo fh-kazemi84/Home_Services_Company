@@ -21,7 +21,7 @@ import java.util.List;
 @AllArgsConstructor
 @Setter
 @Getter
-public class Expert extends User {
+public class Expert extends Users {
 
     @Lob
     @Column(name = "expert_image")

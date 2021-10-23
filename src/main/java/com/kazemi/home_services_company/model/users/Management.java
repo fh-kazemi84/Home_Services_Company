@@ -16,7 +16,7 @@ import javax.persistence.Entity;
 @Setter
 @Getter
 @ToString
-public class Management extends User {
+public class Management extends Users {
     @Column(name = "username")
     private String username;
 

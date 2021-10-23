@@ -21,7 +21,7 @@ import java.util.Date;
 @ToString
 @Table(name = "user")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class User implements Serializable {
+public class Users implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
