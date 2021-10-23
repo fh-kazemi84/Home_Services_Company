@@ -13,7 +13,7 @@ import java.util.Optional;
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Integer> {
     @Override
-    Optional<Admin> findById(Integer integer);
+    Optional<Admin> findById(Integer id);
 
     Optional<Admin> findByUsername(String username);
 }
