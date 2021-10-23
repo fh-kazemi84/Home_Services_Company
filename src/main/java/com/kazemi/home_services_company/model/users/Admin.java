@@ -16,11 +16,11 @@ import javax.persistence.Entity;
 @Setter
 @Getter
 @ToString
-public class Management extends Users {
+public class Admin extends Users {
     @Column(name = "username")
     private String username;
 
-    public Management() {
-        this.setUserRole(UserRole.MANAGEMENT);
+    public Admin() {
+        this.setUserRole(UserRole.ADMIN);
     }
 }
