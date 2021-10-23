@@ -54,6 +54,9 @@ public class Users implements Serializable {
     @Column(name = "credit")
     private Long credit;
 
+    @Column(name = "verification_code", length = 64)
+    private String verificationCode;
+
     public String getFullName() {
         return getName() + " " + getFamily();
     }
